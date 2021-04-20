@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>Je suis la page About, Monsieur {{ $prenom }} {{ $nom }}</h1>
-    <a href="/welcome">Welcome</a>
+    <a href={{ route("pagePrincipale") }}>Welcome</a>
 </body>
 </html>
