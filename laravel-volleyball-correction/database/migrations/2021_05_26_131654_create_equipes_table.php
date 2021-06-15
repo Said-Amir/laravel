@@ -18,6 +18,7 @@ class CreateEquipesTable extends Migration
             $table->string('nom');
             $table->string('ville');
             $table->string('pays');
+            $table->string('logo');
             $table->integer('max');
             $table->integer('att');
             $table->integer('ct');

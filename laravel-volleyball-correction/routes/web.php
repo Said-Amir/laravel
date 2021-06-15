@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EquipeController;
+use App\Http\Controllers\JoueurController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/backoffice', function () {
+    $current = 'backend';
+    return view('backoffice.back', compact('current'));
 });
 
+Route::get('/', function () {
+    $current = 'front';
+    return view('front', compact('current'));
+});
+
+// Equipes
 Route::resource('/equipes', EquipeController::class);
+
+// Joueurs
+Route::resource('/joueurs', JoueurController::class);

@@ -11,7 +11,7 @@ class Equipe extends Model
 
     protected $table = "equipes";
 
-    protected $fillable = ["nom", "ville", 'pays', 'max', 'att', 'ct', 'dc', 'rp', 'continent_id'];
+    protected $fillable = ["nom", "ville", 'pays', 'logo', 'max', 'att', 'ct', 'dc', 'rp', 'continent_id'];
 
     public function continent(){
         return $this->belongsTo(Continent::class);

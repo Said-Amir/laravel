@@ -30,7 +30,7 @@ class JoueurFactory extends Factory
             'genre_id'=>$this->faker->numberBetween(1, 2),
             'origine'=>$this->faker->country(),
             'role_id'=>$this->faker->numberBetween(1, 4),
-            'equipe_id'=>$this->faker->numberBetween(1, 5),
+            'equipe_id'=>$this->faker->numberBetween(1, 6),
             'created_at'=>now()
         ];
     }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Volley</title>
+    <title>Teams Manager</title>
     <link rel="stylesheet" href={{ asset("css/app.css") }}>
 </head>
 <body>
@@ -14,70 +14,35 @@
                 <button class="pull-button">
                     <span class="mif-menu"></span>
                 </button>
-    
+
                 <ul class="navview-menu">
-                    <li>
-                        <a href="/">
-                            <span class="icon"><span class="mif-home"></span></span>
-                            <span class="caption">Home</span>
-                        </a>
-                    </li>
     
                     <li class="item-separator"></li>
-    
-                    <li class="item-header">Main pages</li>
-    
-                    <li>
-                        <a href="#">
-                            <span class="icon"><span class="mif-apps"></span></span>
-                            <span class="caption">Apps</span>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="#">
-                            <span class="icon"><span class="mif-gamepad"></span></span>
-                            <span class="caption">Games</span>
+                    
+                    <li class="item-header myFont">Backoffice</li>
+                    <li class="item-separator border-bottom bd-dark border-size-4"></li>
+                    <li class="{{ $current === 'equipe' ? "active"   : "" }}">
+                        <a class="active" href={{ route("equipes.index") }}>
+                            <span class="icon"><span class="mif-users"></span></span>
+                            <span class="caption">Equipes</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="dropdown-toggle">
-                            <span class="icon"><span class="mif-music"></span></span>
-                            <span class="caption">Music</span>
+                        <a class="active" href={{ route("joueurs.index") }}>
+                            <span class="icon"><span class="mif-user"></span></span>
+                            <span class="caption">Joueurs</span>
                         </a>
-                        <ul class="navview-menu" data-role="dropdown">
-                            <li>
-                                <a href="#">
-                                    <span class="icon"><span class="mif-gamepad"></span></span>
-                                    <span class="caption">Games</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="icon"><span class="mif-film"></span></span>
-                                    <span class="caption">Movies</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
-    
+                    <li class="item-separator border-bottom bd-dark border-size-4"></li>
+
                     <li>
-                        <a href="#">
-                            <span class="icon"><span class="mif-folder"></span></span>
-                            <span class="caption">Documents</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon"><span class="mif-cog"></span></span>
-                            <span class="caption">Settings</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="icon"><span class="mif-cogs"></span></span>
-                            <span class="caption">Settings</span>
-                        </a>
-                    </li>
+                        <li class="{{ $current === 'front' ? "active"   : "" }}">
+                            <a href="/">
+                                <span class="icon"><span class="mif-home"></span></span>
+                                <span class="caption">Front-end</span>
+                            </a>
+                        </li>
+
                 </ul>
     
             </div>
